@@ -1,0 +1,20 @@
+
+THERE ARE THREE TYPES IN QUEUE : 
+1.QUEUE(interface)
+2.DEQUE(interface)
+3.PRIORITY QUEUE(class)
+
+
+QUEUE AND DEQUE are created using LinkedList class or ArrayDeque class
+
+PRIORITY QUEUE IS ITSELF A CLASS SO ITS OBJECT CREATED BY OWN
+
+//SYNTAC
+
+1.Queue<Integer> q = new LinkedList<>();
+2.Deque<Integer> dq = new LinkedList<>();
+
+3.PriorityQueue<Integer> pq = new PriorityQueue<>();
+
+
+
