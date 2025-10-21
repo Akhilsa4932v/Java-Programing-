@@ -1,0 +1,64 @@
+Constructor chaining in Java means calling one constructor from another within the same class or between parent and child classes. It helps reuse code and avoid redundancy.
+
+Types of Constructor Chaining
+Within the same class (using this())
+
+One constructor calls another constructor in the same class.
+
+Helps avoid code duplication.
+
+
+class Example {
+    
+    Example() {
+        this(10);  // Calls parameterized constructor
+        System.out.println("No-argument constructor");
+    }
+
+    Example(int x) {
+        System.out.println("Parameterized constructor: " + x);
+    }
+
+    public static void main(String[] args) {
+        Example obj = new Example();
+    }
+}
+Output:
+
+Parameterized constructor: 10  
+No-argument constructor  
+
+
+Between parent and child class (using super())
+
+A child class constructor calls a parent class constructor.
+
+
+class Parent {
+    Parent() {
+        System.out.println("Parent constructor");
+    }
+}
+
+class Child extends Parent {
+    Child() {
+        super();  // Calls Parent class constructor
+        System.out.println("Child constructor");
+    }
+
+    public static void main(String[] args) {
+        Child obj = new Child();
+    }
+}
+Output:
+
+
+Parent constructor  
+Child constructor  
+
+Why Use Constructor Chaining?
+Reduces code duplication.
+
+Ensures proper initialization of objects.
+
+Improves code readability and maintainability.
